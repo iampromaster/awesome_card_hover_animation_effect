@@ -1,0 +1,82 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+.card .image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover .image {
+  transform: scale(0.9);
+  margin-top: -120px;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card .content {
+  text-align: center;
+  height: 35px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+.card:hover .content {
+  height: 200px;
+}
+
+.content h2 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.content p {
+  margin-bottom: 15px;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.content .btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  padding: 8px 30px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.content .btn:hover {
+  background: #000;
+}
+
+.card:hover .content p,
+.card:hover .content .btn {
+  opacity: 1;
+}
